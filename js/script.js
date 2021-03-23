@@ -1,9 +1,11 @@
 // Funzione comparsa dropdown
 function dropAppear(){
-    // Disattivo il click che toglie i dropdown se ci sono sopra
+    $('.primoLink > a').click(function () {
+        dropDisappear();
+    });
     $(window).off('click');
 
-    // Controllo se ci sono altri drop attivi e li rimuovo
+    // Controllo se ci sono altri drop attivi
     var links = $('.lista-nav > li');
     // Richiamo la funzione disappear per rimuoverli
     disappear(links);
@@ -12,6 +14,8 @@ function dropAppear(){
     var link = $(this);
     var dropdown = link.children('div.dropdown');
     dropdown.addClass('active');
+
+    // Disattivo il click che toglie i dropdown se ci sono sopra
 }
 
 // Funzione scomparsa
@@ -23,10 +27,11 @@ function disappear(links) {
 
 // Funzione scomparsa se clicco fuori
 function dropDisappear() {
+    console.log('aaaa');
     $(window).click(function () {
         var links = $('.lista-nav > li');
         disappear(links);
-    })
+    });
 }
 
 // Funzione iniziale
