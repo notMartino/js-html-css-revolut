@@ -37,7 +37,7 @@ function dropDisappear() {
 // Funzione iniziale
 function init(){
     $('.lista-nav > li').mouseenter(dropAppear);
-    $('.dropdown').mouseleave(dropDisappear);
+    $('.lista-nav > li').mouseleave(dropDisappear);
 }   
 
 $(document).ready(init);
