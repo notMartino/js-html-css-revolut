@@ -45,7 +45,7 @@ a{
     background-color: white;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 300ms;
 }
 .dropdown.active{
     visibility: visible;
