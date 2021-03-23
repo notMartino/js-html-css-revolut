@@ -5,9 +5,10 @@
     box-sizing: border-box;
 }
 body{
-    background-color: darkslateblue;
-    color: /*darkviolet;*/ white;
-    font-family: 'New Tegomin', serif;
+    background-color: white;
+    color: white;
+    font-family: 'Chango', cursive;
+    font-family: 'Lobster', cursive;
 }
 
 ul{
@@ -20,34 +21,55 @@ a{
 /* Proprieta header */
 .lista-nav{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     height: 100px;
-    font-size: 30px;
+    font-size: 40px;
     background-color: indigo;
 }
-.lista-nav li{
+.lista-nav > li{
     position: relative;
+    margin: 0 20px;
+    padding: 0 10px;
 }
 .lista-nav a{
     color: white;
-    text-shadow: 1px 1px 0 fuchsia, -1px -1px 0 fuchsia, -1px 1px 0 fuchsia, 1px -1px 0 fuchsia;
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+    
 }
 
 /* Dropdowns */
 .dropdown{
     position: absolute;
-    top: 100%;
+    top:calc(100% + 26px);
     left: 50%;
     transform: translateX(-50%);
     min-height: 100px;
-    min-width: 100px;
+    min-width: 100%;
     background-color: white;
     visibility: hidden;
     opacity: 0;
     transition: opacity 300ms;
+    background-color: indigo;
+    padding: 10px;
+    font-size: 30px;
 }
 .dropdown.active{
     visibility: visible;
     opacity: 1;
+}
+
+.dropdown li{
+    transition: transform 300ms;
+    padding: 0 15px;
+}
+.dropdown li:hover{
+    transform: scale(1.1);
+}
+.dropdown li:hover a, .lista-nav > li:hover > a{
+    color: greenyellow;
+}
+
+.dropdown a{
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
 }
